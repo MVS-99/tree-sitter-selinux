@@ -1,0 +1,57 @@
+{
+  "name": "tree-sitter-selinux",
+  "version": "0.0.1",
+  "description": "Tree-sitter grammar for SELinux kernel language",
+  "main": "index.js",
+  "types": "bindings/node",
+  "scripts": {
+    "test": "tree-sitter test",
+    "install": "node-gyp-build",
+    "prebuildify": "prebuildify --napi --strip"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MVS-99/tree-sitter-selinux.git"
+  },
+  "keywords": [
+    "tree-sitter",
+    "selinux",
+    "parser",
+    "syntax"
+  ],
+  "files": [
+    "grammar.js",
+    "binding.gyp",
+    "prebuilds/**",
+    "bindings/node/*",
+    "queries/*",
+    "src/**"
+  ],
+  "author": "Manuel Vallejo Sabadell <manuel.v.s1999@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MVS-99/tree-sitter-selinux/issues"
+  },
+  "homepage": "https://github.com/MVS-99/tree-sitter-selinux#readme",
+  "dependencies": {
+    "node-addon-api": "^7.1.0",
+    "node-gyp-build": "^4.8.0"
+  },
+  "peerDependencies": {
+    "tree-sitter": "^0.21.0"
+  },
+  "peerDependenciesMeta": {
+    "tree_sitter": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "prebuildify": "^6.0.0"
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.selinux",
+      "injection-regex": "^selinux$"
+    }
+  ]
+}
